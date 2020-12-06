@@ -44,7 +44,7 @@ class App extends Component<AppProps, AppState> {
   };
 
   changePoro = (e: React.FormEvent<HTMLInputElement>) : void => {
-    this.setState((prevState, prevProps) => {return {poro : e.currentTarget.value}});
+    this.setState({poro : e.currentTarget.value});
   }
 
   tada = ():void => {
@@ -59,7 +59,6 @@ class App extends Component<AppProps, AppState> {
       <input type="text" value={this.state.poro} name="poro" onChange={this.changePoro}/>
       {this.state.toogle && <p>Toogle on</p>}
       {this.state.poro}
-      {/*{typeof this.state.poro === "MakeHappendMiracle"}*/}
     </div>
   }
 }
